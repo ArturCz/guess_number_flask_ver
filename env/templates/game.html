@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Number Guessing Game</title>
+</head>
+<body>
+    <h1>Reverse Number Guessing Game</h1>
+    <form method="POST">
+        <p>Is your number: {{ guess }}</p>
+        <input type="hidden" name="min_num" value="{{ min_num }}">
+        <input type="hidden" name="max_num" value="{{ max_num }}">
+        <input type="hidden" name="guess" value="{{ guess }}">
+        <input type="hidden" name="tries" value="{{ tries }}">
+        <button type="submit" name="answer" value="too_big">Too big</button>
+        <button type="submit" name="answer" value="too_small">Too small</button>
+        <button type="submit" name="answer" value="correct">You win</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
